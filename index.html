@@ -13,22 +13,23 @@
 
   <style>
     :root {
-      --primary: #064e3b;
-      --primary-dark: #022c22;
-      --accent: #10b981;
-      --accent-light: #34d399;
-      --accent-dark: #059669;
+      --primary: #0a3d1f;
+      --primary-dark: #052511;
+      --accent: #22c55e;
+      --accent-light: #4ade80;
+      --accent-dark: #16a34a;
+      --gold: #eab308;
       --white: #ffffff;
-      --gray-50: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
-      --gray-300: #cbd5e1;
-      --gray-400: #94a3b8;
-      --gray-500: #64748b;
-      --gray-600: #475569;
-      --gray-700: #334155;
-      --gray-800: #1e293b;
-      --gray-900: #0f172a;
+      --gray-50: #fafafa;
+      --gray-100: #f5f5f5;
+      --gray-200: #e5e5e5;
+      --gray-300: #d4d4d4;
+      --gray-400: #a3a3a3;
+      --gray-500: #737373;
+      --gray-600: #525252;
+      --gray-700: #404040;
+      --gray-800: #262626;
+      --gray-900: #171717;
       --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
       --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
       --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -96,7 +97,7 @@
     /* Hero Professional */
     .hero {
       padding: 6rem 0;
-      background: var(--gray-900);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       position: relative;
       overflow: hidden;
       display: flex;
@@ -111,7 +112,7 @@
       right: -10%;
       width: 60%;
       height: 100%;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -186,7 +187,7 @@
 
     /* Trust Section */
     .trust-section {
-      background: var(--white);
+      background: var(--gray-50);
       padding: 3.5rem 2rem;
       border-bottom: 1px solid var(--gray-100);
     }
@@ -206,7 +207,7 @@
       background: var(--white);
       box-shadow: var(--shadow-lg);
       transform: translateY(-4px);
-      border-color: var(--accent);
+      border-color: var(--accent-light);
     }
 
     .trust-icon { font-size: 2rem; }
@@ -220,7 +221,7 @@
 
     .section-tag {
       display: inline-block;
-      background: var(--gray-100);
+      background: linear-gradient(135deg, #dcfce7, #bbf7d0);
       color: var(--primary);
       padding: 0.5rem 1rem;
       border-radius: 8px;
@@ -239,7 +240,7 @@
 
     /* Product Hero Professional */
     .product-hero {
-      background: var(--gray-900);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       border-radius: 40px;
       padding: 4rem;
       margin-top: 2rem;
@@ -250,14 +251,14 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .product-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(16, 185, 129, 0.1);
-      color: var(--accent);
-      border: 1px solid rgba(16, 185, 129, 0.2);
+      background: rgba(34, 197, 94, 0.15);
+      color: var(--accent-light);
+      border: 1px solid rgba(34, 197, 94, 0.3);
       padding: 0.5rem 1.2rem; border-radius: 50px;
       font-size: 0.8rem; font-weight: 700; margin-bottom: 1.5rem;
     }
@@ -281,10 +282,10 @@
 
     .feature-icon {
       width: 28px; height: 28px;
-      background: rgba(16, 185, 129, 0.2);
+      background: rgba(34, 197, 94, 0.2);
       border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      color: var(--accent); font-weight: 800; flex-shrink: 0; font-size: 0.9rem;
+      color: var(--accent-light); font-weight: 800; flex-shrink: 0; font-size: 0.9rem;
     }
 
     .feature-item span { font-size: 0.9rem; font-weight: 600; color: var(--white); }
@@ -312,7 +313,7 @@
 
     .service-icon {
       width: 60px; height: 60px;
-      background: var(--gray-100);
+      background: linear-gradient(135deg, #dcfce7, #bbf7d0);
       color: var(--primary);
       border-radius: 16px;
       display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;
@@ -350,7 +351,7 @@
 
     .gallery-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+      background: linear-gradient(to top, var(--primary-dark), transparent);
       display: flex; align-items: flex-end; padding: 1.5rem; opacity: 0; transition: opacity 0.3s;
     }
 
@@ -359,7 +360,7 @@
 
     /* CTA Banner Refined */
     .cta-banner {
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       border-radius: 40px;
       padding: 5rem;
       text-align: center;
@@ -368,7 +369,7 @@
       box-shadow: var(--shadow-xl);
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .cta-banner-content { max-width: 700px; margin: 0 auto; position: relative; z-index: 2; }
@@ -420,44 +421,44 @@
 
     /* Footer Professional */
     footer {
-      background: var(--gray-50);
-      color: var(--gray-600);
+      background: var(--primary);
+      color: var(--gray-300);
       padding: 4rem 2rem 2rem;
-      border-top: 1px solid var(--gray-200);
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     .footer-content {
       max-width: 1400px; margin: 0 auto;
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
-      padding-bottom: 2.5rem; border-bottom: 1px solid var(--gray-200);
+      padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .footer-brand h4 { color: var(--gray-900); font-size: 1.3rem; margin-bottom: 0.8rem; }
-    .footer-brand p { font-size: 0.9rem; margin-bottom: 0.4rem; line-height: 1.6; color: var(--gray-500); }
+    .footer-brand h4 { color: var(--white); font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; margin-bottom: 0.4rem; line-height: 1.6; color: var(--gray-400); }
 
-    .footer-section h5 { color: var(--gray-900); font-size: 0.95rem; font-weight: 700; margin-bottom: 1.2rem; }
+    .footer-section h5 { color: var(--white); font-size: 0.95rem; font-weight: 700; margin-bottom: 1.2rem; }
     .footer-section ul { list-style: none; }
     .footer-section li { margin-bottom: 0.6rem; }
-    .footer-section a { color: var(--gray-500); font-size: 0.9rem; transition: color 0.2s; }
-    .footer-section a:hover { color: var(--accent); }
+    .footer-section a { color: var(--gray-400); font-size: 0.9rem; transition: color 0.2s; }
+    .footer-section a:hover { color: var(--accent-light); }
 
     .social-links { display: flex; gap: 0.8rem; margin-top: 1.2rem; }
     .social-link {
       width: 36px; height: 36px;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      color: var(--gray-600);
+      color: var(--gray-400);
       transition: all 0.3s;
     }
-    .social-link:hover { background: var(--accent); color: var(--white); border-color: var(--accent); transform: translateY(-2px); }
+    .social-link:hover { background: var(--accent); color: var(--primary-dark); border-color: var(--accent); transform: translateY(-2px); }
 
     .footer-bottom {
       max-width: 1400px; margin: 1.5rem auto 0; text-align: center;
       font-size: 0.85rem; color: var(--gray-500);
       padding-top: 1.5rem;
-      border-top: 1px solid var(--gray-200);
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     /* Responsive Professional */
