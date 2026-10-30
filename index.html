@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#0a3d1f">
   <title>Agrícola São Gonçalo | Tecnologia e Inovação em Colheita - Horizontina/RS</title>
   <meta name="description" content="Líder em soluções para otimização de colheita. Côncavo Universal, assistência técnica especializada e equipamentos de alta performance em Horizontina e região.">
   
@@ -49,6 +50,21 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+    }
+
+    /* Melhorias para touch */
+    a, button {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    img {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      pointer-events: none;
     }
 
     /* Animations */
@@ -337,10 +353,13 @@
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       transition: all 0.3s;
       cursor: pointer;
       border: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
 
     .btn-primary {
@@ -979,6 +998,7 @@
     @media (max-width: 1200px) {
       .hero-content {
         grid-template-columns: 1fr;
+        gap: 3rem;
       }
       .hero-text h1 {
         font-size: 3.5rem;
@@ -986,6 +1006,7 @@
       .product-hero {
         grid-template-columns: 1fr;
         padding: 3rem;
+        gap: 3rem;
       }
       .services-grid {
         grid-template-columns: 1fr;
@@ -993,35 +1014,315 @@
       .footer-content {
         grid-template-columns: 1fr 1fr;
       }
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
-      .top-bar-content {
-        flex-direction: column;
-        gap: 0.5rem;
+      html {
+        font-size: 14px;
       }
+
+      .top-bar {
+        display: none;
+      }
+
+      .header-content {
+        padding: 1rem 1.5rem;
+      }
+
+      .logo-img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .logo-text h1 {
+        font-size: 1.1rem;
+      }
+
+      .logo-text p {
+        font-size: 0.65rem;
+      }
+
       nav {
         display: none;
       }
-      .hero-text h1 {
-        font-size: 2.5rem;
+
+      /* Mobile Menu Button */
+      .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
       }
+
+      .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: var(--primary);
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 3rem 0;
+      }
+
+      .hero-content {
+        padding: 2rem 1.5rem;
+        gap: 2.5rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        line-height: 1.15;
+      }
+
+      .hero-text p {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+      }
+
       .hero-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero-stat-number {
+        font-size: 1.8rem;
+      }
+
+      .hero-stat-label {
+        font-size: 0.75rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .hero-image-main {
+        transform: none;
+      }
+
+      .trust-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .trust-badges {
+        flex-direction: column;
         gap: 1rem;
       }
-      .section-title {
-        font-size: 2.5rem;
+
+      .trust-badge {
+        width: 100%;
+        justify-content: center;
       }
+
+      .container {
+        padding: 4rem 1.5rem;
+      }
+
+      .section-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      .section-desc {
+        font-size: 1.05rem;
+      }
+
+      .product-hero {
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+        border-radius: 24px;
+      }
+
+      .product-hero h3 {
+        font-size: 2rem;
+      }
+
+      .product-hero p {
+        font-size: 1.05rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+
+      .feature-item {
+        padding: 0.8rem;
+      }
+
+      .services-grid {
+        gap: 1.5rem;
+      }
+
+      .service-card {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+      }
+
+      .service-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.6rem;
+      }
+
+      .service-card h3 {
+        font-size: 1.3rem;
+      }
+
+      .service-card p {
+        font-size: 1rem;
+      }
+
       .gallery {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
+
+      .gallery-item {
+        border-radius: 16px;
+      }
+
+      .gallery-overlay {
+        padding: 1.5rem;
+      }
+
+      .gallery-overlay h4 {
+        font-size: 1.1rem;
+      }
+
+      .cta-banner {
+        padding: 3rem 2rem;
+        border-radius: 24px;
+        margin: 4rem 0;
+      }
+
+      .cta-banner h2 {
+        font-size: 2rem;
+      }
+
+      .cta-banner p {
+        font-size: 1.05rem;
+      }
+
+      .map-section {
+        margin-top: 4rem;
+      }
+
+      .map-container {
+        border-radius: 24px;
+      }
+
+      .map-header {
+        padding: 2rem 1.5rem;
+      }
+
+      .map-header h3 {
+        font-size: 1.6rem;
+      }
+
+      .map-header p {
+        font-size: 0.95rem;
+      }
+
       .map-wrapper {
         height: 400px;
       }
+
+      .map-overlay-btn {
+        bottom: 20px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border-radius: 12px;
+      }
+
+      .whatsapp-float {
+        width: 58px;
+        height: 58px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.8rem;
+      }
+
+      footer {
+        padding: 3rem 1.5rem 1.5rem;
+      }
+
       .footer-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+      }
+
+      .footer-brand h4 {
+        font-size: 1.2rem;
+      }
+
+      .footer-section h5 {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-section li {
+        margin-bottom: 0.6rem;
+      }
+
+      .footer-section a {
+        font-size: 0.9rem;
+      }
+
+      .social-links {
+        margin-top: 1.2rem;
+      }
+
+      .footer-bottom {
+        margin-top: 1.5rem;
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .product-hero h3 {
+        font-size: 1.8rem;
+      }
+
+      .cta-banner h2 {
+        font-size: 1.8rem;
       }
     }
   </style>
