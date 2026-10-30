@@ -653,6 +653,75 @@
       gap: 4rem;
     }
 
+    /* Map Section */
+    .map-section {
+      margin-top: 5rem;
+    }
+
+    .map-container {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .map-header {
+      padding: 2rem 2.5rem;
+      border-bottom: 1px solid var(--gray-200);
+      text-align: center;
+    }
+
+    .map-header h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .map-header p {
+      color: var(--gray-600);
+      font-size: 1rem;
+    }
+
+    .map-wrapper {
+      position: relative;
+      width: 100%;
+      height: 500px;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .map-overlay-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+      transition: all 0.3s;
+      z-index: 10;
+    }
+
+    .map-overlay-btn:hover {
+      transform: translateX(-50%) translateY(-3px);
+      background: var(--accent-bright);
+      box-shadow: 0 12px 32px rgba(16, 185, 129, 0.5);
+    }
+
     .contact-info h3 {
       font-size: 2rem;
       font-weight: 900;
@@ -838,6 +907,9 @@
       .stats { grid-template-columns: 1fr 1fr; padding: 2rem; }
       .section-title { font-size: 2rem; }
       .services-grid { grid-template-columns: 1fr; }
+      .map-wrapper { height: 400px; }
+      .map-header { padding: 1.5rem; }
+      .map-overlay-btn { font-size: 0.9rem; padding: 0.8rem 1.5rem; }
     }
   </style>
 </head>
@@ -1154,6 +1226,27 @@
           <p>Fale com nossos especialistas e agende uma visita ou faça um orçamento.</p>
           <a href="https://wa.me/5555997344238?text=Gostaria%20de%20atendimento." target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
             💬 Conversar Agora
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="container map-section">
+      <div class="map-container">
+        <div class="map-header">
+          <h3>📍 Visite Nossa Sede</h3>
+          <p>Av. Laguna - Panorama, Horizontina - RS</p>
+        </div>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3488.8!2d-54.607!3d-27.627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM3JzM3LjIiUyA1NMKwMzYnMjUuMiJX!5e0!3m2!1spt-BR!2sbr!4v1635000000000!5m2!1spt-BR!2sbr&q=Av.+Laguna+-+Panorama,+Horizontina+-+RS" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização Agrícola São Gonçalo - Horizontina/RS">
+          </iframe>
+          <a href="https://www.google.com/maps/dir//Av.+Laguna+-+Panorama,+Horizontina+-+RS,+98920-000" target="_blank" class="map-overlay-btn">
+            🗺️ Abrir no Google Maps
           </a>
         </div>
       </div>
