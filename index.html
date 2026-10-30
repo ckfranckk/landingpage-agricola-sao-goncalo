@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrícola São Gonçalo | Tecnologia em Colheita e Assistência Técnica Especializada - Horizontina/RS</title>
+  <meta name="description" content="Assistência técnica no campo, regulagem de colheitadeiras e tratores, Côncavo Universal para múltiplas culturas. Reduza até 85% das perdas na colheita em Horizontina e região.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-dark: #071a0e;
+      --brand-green: #0d381c;
+      --brand-light: #165b2f;
+      --accent: #22c55e;
+      --accent-glow: rgba(34, 197, 94, 0.3);
+      --surface: #ffffff;
+      --surface-subtle: #f8faf8;
+      --border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--surface-subtle);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    header {
+      background: rgba(7, 26, 14, 0.95);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #22c55e, #15803d);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .btn-nav {
+      background: var(--accent);
+      color: #071a0e !important;
+      padding: 0.65rem 1.3rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .btn-nav:hover {
+      transform: translateY(-2px);
+      background: #4ade80;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at 50% 10%, #0d381c 0%, #071a0e 100%);
+      color: white;
+      padding: 6.5rem 2rem 7.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 90%, rgba(34, 197, 94, 0.12), transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.4rem 1.1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 1.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      max-width: 760px;
+      margin: 0 auto 2.8rem;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-main {
+      background: var(--accent);
+      color: #071a0e;
+      padding: 0.95rem 2.2rem;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
+      transition: all 0.25s ease;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px);
+      background: #4ade80;
+      box-shadow: 0 10px 28px rgba(34, 197, 94, 0.5);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: white;
+      padding: 0.95rem 2.2rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Container System */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-head .label {
+      color: var(--brand-light);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .section-head h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-top: 0.8rem;
+    }
+
+    /* Stats Bar */
+    .stats-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--brand-light);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* Flagship Product Feature */
+    .product-hero {
+      background: linear-gradient(135deg, #071a0e 0%, #0d381c 100%);
+      color: white;
+      border-radius: 28px;
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+      box-shadow: 0 20px 40px rgba(7, 26, 14, 0.2);
+      position: relative;
+      overflow: hidden;
+      margin-top: 4rem;
+    }
+
+    .product-badge {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #4ade80;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+
+    .product-hero h3 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .product-hero p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .feature-points {
+      list-style: none;
+      display: grid;
+      gap: 1.1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .feature-points li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .icon-check {
+      width: 26px;
+      height: 26px;
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4ade80;
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .product-card-widget {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+    }
+
+    .product-card-widget h4 {
+      font-size: 1.35rem;
+      color: #4ade80;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+
+    .product-card-widget p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .tech-list li {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tech-list li::before {
+      content: "→";
+      color: #4ade80;
+      font-weight: 800;
+    }
+
+    /* Grid Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+      border-color: #cbd5e1;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: #f0fdf4;
+      color: var(--brand-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-details {
+      list-style: none;
+      display: grid;
+      gap: 0.6rem;
+      margin-top: 1.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .service-details li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .service-details li::before {
+      content: "✓";
+      color: var(--brand-light);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    /* Regional Context Banner */
+    .regional-banner {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border: 1px solid #bbf7d0;
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .regional-banner h3 {
+      font-size: 1.8rem;
+      color: var(--brand-dark);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .regional-banner p {
+      color: #166534;
+      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Cultures Section */
+    .cultures-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .culture-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem 1.2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .culture-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      border-color: #cbd5e1;
+    }
+
+    .culture-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .culture-item h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Why Us Section */
+    .why-us {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 4rem 3rem;
+      margin-top: 4rem;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .why-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .why-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--brand-light);
+      line-height: 1;
+    }
+
+    .why-item h4 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .why-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Contact Block */
+    .contact-card {
+      background: var(--surface);
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      padding: 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .contact-info-list {
+      display: grid;
+      gap: 1.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      background: #f0fdf4;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      color: var(--brand-light);
+    }
+
+    .contact-info-item h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .contact-info-item p, .contact-info-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.98rem;
+    }
+
+    .social-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .btn-social {
+      padding: 0.75rem 1.4rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s;
+    }
+
+    .btn-social:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: white;
+    }
+
+    .btn-facebook {
+      background: #1877f2;
+      color: white;
+    }
+
+    .cta-highlight {
+      background: linear-gradient(135deg, #071a0e, #0d381c);
+      color: white;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .cta-highlight h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-highlight p {
+      color: #94a3b8;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      border-radius: 50px;
+      padding: 14px 24px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+      transition: all 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--brand-dark);
+      color: #64748b;
+      padding: 3.5rem 2rem 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-copyright {
+      max-width: 1180px;
+      margin: 1.5rem auto 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #475569;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 2.4rem; }
+      .product-hero { grid-template-columns: 1fr; padding: 2.2rem; }
+      .contact-card { grid-template-columns: 1fr; padding: 2rem; }
+      .nav-links { display: none; }
+      .why-us { padding: 2.5rem 1.8rem; }
+      .stats-section { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">🌾</div>
+        Agrícola <span>São Gonçalo</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#solucoes">Soluções</a>
+        <a href="#concavo">Côncavo Universal</a>
+        <a href="#culturas">Culturas</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+        <a href="https://wa.me/5555997344238?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento." target="_blank" class="btn-nav">
+          WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-tag">🌱 Tecnologia, Eficiência e Soluções para o Agro em Horizontina/RS</span>
+      <h1>Reduza até <span class="highlight">85% das Perdas na Colheita</span> com Assistência Técnica Especializada</h1>
+      <p>Acompanhamento no campo, regulagem precisa de colheitadeiras e tratores, e o revolucionário Côncavo Universal para múltiplas culturas. Transforme cada grão em lucro real.</p>
+      
+      <div class="hero-buttons">
+        <a href="https://wa.me/5555997344238?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20Agr%C3%ADcola%20S%C3%A3o%20Gon%C3%A7alo." target="_blank" class="btn-main">
+          💬 Falar no WhatsApp (55) 99734-4238
+        </a>
+        <a href="#concavo" class="btn-outline">Conhecer Côncavo Universal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <span class="stat-number">Até 85%</span>
+        <span class="stat-label">Das perdas de soja ocorrem por falhas na plataforma de corte</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100% Campo</span>
+        <span class="stat-label">Assistência técnica direta na sua lavoura</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">Zero Paradas</span>
+        <span class="stat-label">Sem troca de côncavo entre culturas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">Horizontina</span>
+        <span class="stat-label">Polo agrícola do RS e sede da John Deere no Brasil</span>
+      </div>
+    </div>
+
+    <!-- Flagship Product: Côncavo Universal -->
+    <section id="concavo" class="product-hero">
+      <div>
+        <span class="product-badge">⚡ Inovação em Colheita</span>
+        <h3>Côncavo Universal para Colheitadeiras</h3>
+        <p>Tecnologia exclusiva projetada para múltiplas culturas sem necessidade de troca. Elimina perdas, evita entupimentos e garante grãos íntegros no graneleiro.</p>
+
+        <ul class="feature-points">
+          <li>
+            <div class="icon-check">✓</div>
+            <span>Redução drástica das perdas de grãos na colheita</span>
+          </li>
+          <li>
+            <div class="icon-check">✓</div>
+            <span>Grãos mais limpos, íntegros e sem quebras ou esmagamentos</span>
+          </li>
+          <li>
+            <div class="icon-check">✓</div>
+            <span>Multicultura: Soja, Milho, Feijão, Trigo, Arroz e outras culturas</span>
+          </li>
+          <li>
+            <div class="icon-check">✓</div>
+            <span>Evita acúmulo e entupimento comparado aos côncavos tradicionais</span>
+          </li>
+          <li>
+            <div class="icon-check">✓</div>
+            <span>Sem necessidade de paradas para troca entre safras</span>
+          </li>
+          <li>
+            <div class="icon-check">✓</div>
+            <span>Fabricado com rigorosos processos de controle de qualidade</span>
+          </li>
+        </ul>
+
+        <a href="https://wa.me/5555997344238?text=Ol%C3%A1!%20Quero%20uma%20cota%C3%A7%C3%A3o%20do%20C%C3%B4ncavo%20Universal%20e%20saber%20mais%20detalhes%20t%C3%A9cnicos." target="_blank" class="btn-main">
+          Solicitar Cotação do Côncavo Universal
+        </a>
+      </div>
+
+      <div class="product-card-widget">
+        <h4>Mais Grãos, Mais Lucro</h4>
+        <p>Volte a colocar cada grão no lugar certo: no seu lucro!</p>
+        
+        <ul class="tech-list">
+          <li>Compatível com as principais marcas de colheitadeiras</li>
+          <li>Instalação rápida e assistência técnica local</li>
+          <li>Otimização de trilha e separação de grãos</li>
+          <li>Maior vazão sem comprometer a qualidade</li>
+          <li>Reduz manutenção e tempo de setup</li>
+        </ul>
+
+        <p style="font-size: 0.85rem; color: #4ade80; margin-top: 1.5rem;">✔ Testado e aprovado em lavouras de Horizontina e região</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="solucoes" style="margin-top: 6rem;">
+      <div class="section-head">
+        <span class="label">Nossos Serviços</span>
+        <h2>Assistência Técnica Completa para Máximas Agrícolas</h2>
+        <p>Atuamos com foco em resultado: cada regulagem, cada ajuste e cada peça são pensados para aumentar sua rentabilidade por hectare.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🌾</div>
+          <h3>Acompanhamento e Otimização no Campo</h3>
+          <p>Nossa equipe técnica vai até a sua propriedade durante a colheita para realizar ajustes em tempo real, garantindo máxima eficiência operacional da colheitadeira.</p>
+          <ul class="service-details">
+            <li>Calibração de paralelismo do côncavo</li>
+            <li>Ajuste de folga de entrada (15-22mm para soja)</li>
+            <li>Regulagem de rotação do rotor (450+ rpm)</li>
+            <li>Otimização do sistema de trilha e separação</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Regulagem e Manutenção Técnica</h3>
+          <p>Manutenção preventiva e corretiva especializada para tratores, colheitadeiras e implementos, evitando paradas inesperadas no auge da safra.</p>
+          <ul class="service-details">
+            <li>Verificação de tensão de correntes alimentadoras</li>
+            <li>Inspeção de barras de trilha e mancais do rotor</li>
+            <li>Regulagem de peneiras e sistema de limpeza</li>
+            <li>Diagnóstico técnico de desempenho</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚜</div>
+          <h3>Comércio de Peças e Equipamentos</h3>
+          <p>Fornecimento atacadista de partes, peças e componentes de alta durabilidade para máquinas e implementos agrícolas com procedência garantida.</p>
+          <ul class="service-details">
+            <li>Peças originais e de reposição certificadas</li>
+            <li>Módulos de alimentação e extensores de graneleiro</li>
+            <li>Sistemas de côncavo e componentes de trilha</li>
+            <li>Entrega rápida para Horizontina e região</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cultures Supported -->
+    <section id="culturas" style="margin-top: 6rem;">
+      <div class="section-head">
+        <span class="label">Culturas Atendidas</span>
+        <h2>Soluções para Todas as Suas Safras</h2>
+        <p>Nossa tecnologia e assistência técnica cobrem as principais culturas do agronegócio brasileiro.</p>
+      </div>
+
+      <div class="cultures-grid">
+        <div class="culture-item">
+          <span class="culture-icon">🌱</span>
+          <h4>Soja</h4>
+        </div>
+        <div class="culture-item">
+          <span class="culture-icon">🌽</span>
+          <h4>Milho</h4>
+        </div>
+        <div class="culture-item">
+          <span class="culture-icon">🫘</span>
+          <h4>Feijão</h4>
+        </div>
+        <div class="culture-item">
+          <span class="culture-icon">🌾</span>
+          <h4>Trigo</h4>
+        </div>
+        <div class="culture-item">
+          <span class="culture-icon">🍚</span>
+          <h4>Arroz</h4>
+        </div>
+        <div class="culture-item">
+          <span class="culture-icon">🌿</span>
+          <h4>Outras Culturas</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regional Banner -->
+    <div class="regional-banner">
+      <h3>Horizontina: O Coração da Tecnologia Agrícola do Brasil</h3>
+      <p>A Agrícola São Gonçalo está sediada em <strong>Horizontina - RS</strong>, polo nacional da mecanização agrícola e sede da maior fábrica de colheitadeiras John Deere fora dos Estados Unidos. Nossa localização estratégica nos permite oferecer assistência técnica ágil, acesso facilitado a peças e equipamentos de última geração, e conhecimento profundo sobre as demandas do produtor rural da região.</p>
+    </div>
+
+    <!-- Why Us Section -->
+    <section id="diferenciais" class="why-us">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <span class="label">Diferenciais</span>
+        <h2 style="font-size: 2rem; font-weight: 800; color: var(--text-main);">Por que Escolher a Agrícola São Gonçalo?</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-number">01</span>
+          <h4>Foco em Resultado Real</h4>
+          <p>Cada instalação, regulagem e produto é pensado para entregar mais rentabilidade por hectare colhido, reduzindo perdas e aumentando a qualidade dos grãos.</p>
+        </div>
+
+        <div class="why-item">
+          <span class="why-number">02</span>
+          <h4>Assistência Presencial no Campo</h4>
+          <p>Nossa equipe técnica vai até a sua lavoura em Horizontina e região para prestar suporte imediato durante a safra, com ajustes em tempo real.</p>
+        </div>
+
+        <div class="why-item">
+          <span class="why-number">03</span>
+          <h4>Tecnologia Comprovada</h4>
+          <p>Trabalhamos com soluções testadas e aprovadas no campo, como o Côncavo Universal, garantindo durabilidade, eficiência e retorno sobre o investimento.</p>
+        </div>
+
+        <div class="why-item">
+          <span class="why-number">04</span>
+          <h4>Atendimento Ágil e Sem Burocracia</h4>
+          <p>Contato direto via WhatsApp para tirar dúvidas, agendar atendimentos técnicos e solicitar cotações de forma rápida e descomplicada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Social Section -->
+    <section id="contato" style="margin-top: 6rem;">
+      <div class="section-head">
+        <span class="label">Fale Conosco</span>
+        <h2>Entre em Contato com Nossa Equipe</h2>
+        <p>Atendimento rápido para tirar suas dúvidas, agendar visitas técnicas, solicitar cotações ou conhecer nossas soluções.</p>
+      </div>
+
+      <div class="contact-card">
+        <div>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--text-main);">Agrícola São Gonçalo Ltda</h3>
+          <p style="color: var(--text-muted); margin-top: 0.3rem;">Tecnologia, eficiência e soluções para o agro</p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <h4>Localização</h4>
+                <p>Av. Laguna - Panorama (Estrada Lajeado Seco)<br>Horizontina - RS, CEP 98.920-000</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">📞</div>
+              <div>
+                <h4>Telefone / WhatsApp</h4>
+                <p><a href="https://wa.me/5555997344238" target="_blank" style="font-weight: 700; color: var(--brand-light);">(55) 99734-4238</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">✉️</div>
+              <div>
+                <h4>E-mail</h4>
+                <p><a href="mailto:agricolasaogoncalo@gmail.com" style="color: var(--brand-light); font-weight: 600;">agricolasaogoncalo@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">🏢</div>
+              <div>
+                <h4>CNPJ</h4>
+                <p>50.675.970/0001-65 • Situação: Ativa</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.8rem;">Acompanhe nossas redes sociais:</h4>
+            <div class="social-group">
+              <a href="https://www.instagram.com/agricola.saogoncalo" target="_blank" class="btn-social btn-instagram">
+                📸 Instagram (@agricola.saogoncalo)
+              </a>
+              <a href="https://www.facebook.com/people/Agr%C3%ADcola-S%C3%A3o-Gon%C3%A7alo/61556730003694/" target="_blank" class="btn-social btn-facebook">
+                👍 Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-highlight">
+          <h3>Solicite Atendimento Técnico ou Cotação</h3>
+          <p>Fale diretamente com nossos especialistas e agende uma visita de campo ou faça um orçamento de peças e equipamentos.</p>
+          <a href="https://wa.me/5555997344238?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20atendimento%20t%C3%A9cnico%20ou%20uma%20cota%C3%A7%C3%A3o." target="_blank" class="btn-main" style="width: 100%; justify-content: center;">
+            💬 Conversar no WhatsApp Agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/5555997344238?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento." target="_blank" class="whatsapp-float" title="Atendimento WhatsApp">
+    💬 WhatsApp
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong style="color: white; font-size: 1.1rem;">Agrícola São Gonçalo Ltda</strong>
+        <p style="margin-top: 0.3rem;">Tecnologia, eficiência e soluções para o agro</p>
+        <p style="margin-top: 0.2rem;">agricolasaogoncalo@gmail.com</p>
+      </div>
+      <div>
+        <span>CNPJ: 50.675.970/0001-65</span><br>
+        <span style="font-size: 0.85rem;">Horizontina / RS • Fundada em 15/05/2023</span>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2026 Agrícola São Gonçalo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
