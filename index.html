@@ -83,12 +83,18 @@
     .logo-icon {
       width: 40px;
       height: 40px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--primary-light) 100%);
+      background: white;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      overflow: hidden;
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     nav {
@@ -419,17 +425,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop');
+      background-image: url('images/771814387_18126495658829030_1415730604815062297_n.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
+      overflow: hidden;
     }
 
     .product-image::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(10, 61, 31, 0.7), rgba(2, 6, 23, 0.6));
+      background: linear-gradient(135deg, rgba(10, 61, 31, 0.3), rgba(2, 6, 23, 0.2));
       border-radius: 20px;
     }
 
@@ -521,30 +528,57 @@
     }
 
     /* Gallery */
+    .products-gallery {
+      margin-top: 6rem;
+    }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
       margin-top: 3rem;
     }
 
     .gallery-item {
-      aspect-ratio: 4/3;
-      border-radius: 16px;
-      overflow: hidden;
       position: relative;
+      border-radius: 20px;
+      overflow: hidden;
       cursor: pointer;
       transition: transform 0.3s;
+      aspect-ratio: 1;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
     .gallery-item:hover {
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay h4 {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
     }
 
     /* Regional Banner */
@@ -813,7 +847,9 @@
   <header>
     <div class="header-container">
       <a href="#" class="logo">
-        <div class="logo-icon">🌾</div>
+        <div class="logo-icon">
+          <img src="images/logo.jpg" alt="Agrícola São Gonçalo Logo">
+        </div>
         Agrícola São Gonçalo
       </a>
       <nav>
@@ -955,6 +991,59 @@
             <li>Sistemas de côncavo</li>
             <li>Entrega rápida na região</li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Gallery -->
+    <div class="container products-gallery">
+      <div class="section-header">
+        <span class="section-tag">Nossos Produtos</span>
+        <h2 class="section-title">Soluções Completas para Colheita</h2>
+        <p class="section-desc">Equipamentos e sistemas de alta performance testados no campo.</p>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/747468487_18122580715829030_2438797701051115253_n.jpg" alt="Colheitadeira John Deere S5 com sistemas de otimização">
+          <div class="gallery-overlay">
+            <h4>Sistemas para John Deere S5</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/819483139_18129922135829030_2956118025954408819_n.jpg" alt="Módulo de Alimentação para colheitadeiras">
+          <div class="gallery-overlay">
+            <h4>Módulo de Alimentação</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/651003911_18109533652829030_3121755236439276898_n.jpg" alt="Rolo de Alimentação para Plataformas Draper">
+          <div class="gallery-overlay">
+            <h4>Rolo de Alimentação Draper</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/640445870_18107959372829030_3556332845217723532_n.jpg" alt="Espalhador de Palhas">
+          <div class="gallery-overlay">
+            <h4>Espalhador de Palhas</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/792881717_18127837900829030_6558926494044145685_n.jpg" alt="Condições Especiais Expointer">
+          <div class="gallery-overlay">
+            <h4>Kit de Otimização Completo</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/656272626_18110534521829030_4928990442827409733_n.jpg" alt="Resultado da colheita - grãos de soja de qualidade">
+          <div class="gallery-overlay">
+            <h4>Resultado no Campo</h4>
+          </div>
         </div>
       </div>
     </div>
