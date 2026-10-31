@@ -484,14 +484,47 @@
       .logo-text p { font-size: 0.6rem; }
       nav { display: none; }
 
-      .hero { min-height: auto; padding: 3rem 0; }
-      .hero-content { padding: 0 1.2rem; gap: 2rem; }
-      .hero-text h1 { font-size: 2.5rem; }
-      .hero-text p { font-size: 1rem; }
-      .hero-stats { flex-direction: column; gap: 1rem; align-items: center; }
-      .hero-stat-number { font-size: 2rem; }
-      .hero-image-main { border-radius: 20px; border-width: 4px; }
-      .hero-image-main img { height: 300px; border-radius: 16px; }
+      .hero { min-height: auto; padding: 2rem 0 3rem; text-align: center; }
+      .hero-content { 
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 1.2rem; 
+        gap: 2.5rem; 
+      }
+      .hero-text h1 { font-size: 2.2rem; margin: 0 auto 1.2rem; }
+      .hero-text p { font-size: 1.05rem; margin: 0 auto 2rem; }
+      .hero-stats { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem; 
+        margin-top: 1.5rem;
+      }
+      .hero-stat-number { font-size: 1.6rem; }
+      .hero-stat-label { font-size: 0.75rem; }
+      
+      .hero-image-main { 
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        transform: none;
+        border-radius: 20px; 
+        border-width: 4px; 
+      }
+      .hero-image-main img { height: 280px; border-radius: 16px; }
+
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+      }
+      .btn { width: 100%; justify-content: center; padding: 1rem 1.5rem; font-size: 1rem; }
+
+      .trust-section { padding: 2.5rem 1.2rem; }
+      .trust-badges { flex-direction: column; gap: 1rem; }
+      .trust-badge { width: 100%; justify-content: flex-start; padding: 1rem 1.5rem; }
+      .trust-badge-text h4 { font-size: 1.1rem; }
+      .trust-badge-text p { font-size: 0.9rem; }
 
       .trust-section { padding: 2.5rem 1.2rem; }
       .trust-badges { flex-direction: column; gap: 1rem; }
@@ -540,8 +573,13 @@
     }
 
     @media (max-width: 480px) {
-      .hero-text h1 { font-size: 2rem; }
-      .hero-image-main img { height: 250px; }
+      .hero-text h1 { font-size: 1.9rem; }
+      .hero-stats { gap: 0.4rem; }
+      .hero-stat-number { font-size: 1.4rem; }
+      .hero-stat-label { font-size: 0.7rem; }
+      .hero-image-main { max-width: 280px; }
+      .hero-image-main img { height: 240px; }
+      .btn { padding: 0.9rem 1.2rem; font-size: 0.95rem; }
       .product-hero h3 { font-size: 1.6rem; }
       .cta-banner h2 { font-size: 1.6rem; }
       .map-wrapper { height: 300px; }
@@ -578,7 +616,7 @@
           <div class="hero-stat"><span class="hero-stat-number">Zero</span><span class="hero-stat-label">Paradas para troca</span></div>
           <div class="hero-stat"><span class="hero-stat-number">+500</span><span class="hero-stat-label">Lavouras atendidas</span></div>
         </div>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <div class="hero-buttons">
           <a href="https://wa.me/5555997344238?text=Gostaria%20de%20falar%20com%20um%20especialista." target="_blank" class="btn btn-primary">💬 Falar com Especialista</a>
           <a href="#concavo" class="btn btn-secondary">Ver Côncavo Universal →</a>
         </div>
