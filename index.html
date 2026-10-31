@@ -137,7 +137,7 @@
 
     .hero-text p {
       font-size: 1.25rem;
-      color: var(--gray-400);
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 2.5rem;
       max-width: 600px;
     }
@@ -164,7 +164,7 @@
       line-height: 1; display: block; margin-bottom: 0.3rem;
     }
 
-    .hero-stat-label { font-size: 0.95rem; color: var(--gray-500); font-weight: 500; }
+    .hero-stat-label { font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); font-weight: 500; }
 
     /* Buttons */
     .btn {
@@ -187,9 +187,9 @@
 
     /* Trust Section */
     .trust-section {
-      background: var(--gray-50);
+      background: var(--primary);
       padding: 3.5rem 2rem;
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .trust-badges { display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; }
@@ -197,22 +197,22 @@
     .trust-badge {
       display: flex; align-items: center; gap: 1.5rem;
       padding: 1.5rem 2rem;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-100);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 20px;
       transition: all 0.3s;
     }
 
     .trust-badge:hover {
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.1);
       box-shadow: var(--shadow-lg);
       transform: translateY(-4px);
       border-color: var(--accent-light);
     }
 
     .trust-icon { font-size: 2rem; }
-    .trust-badge-text h4 { font-size: 1.1rem; color: var(--primary); }
-    .trust-badge-text p { font-size: 0.9rem; color: var(--gray-500); font-weight: 500; }
+    .trust-badge-text h4 { font-size: 1.1rem; color: var(--white); }
+    .trust-badge-text p { font-size: 0.9rem; color: var(--gray-300); font-weight: 500; }
 
     /* Section Common */
     .container { max-width: 1400px; margin: 0 auto; padding: 5rem 2rem; }
